@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <title>REBA Insights DEFI</title>
+  <link rel="stylesheet" href="./style.css">
+
+</head>
+<body>
+<!-- partial:index.partial.html -->
+<!-- Grupo A -->
+<section id="grupo-a">
+  <h2>Grupo A: Cuello, Tronco y Piernas</h2>
+  <form id="grupoAForm">
+    <div class="form-group">
+      <label for="cuello">Cuello:</label>
+      <select id="cuello" class="form-control">
+        <option value="1">0° a 20° flexión</option>
+        <option value="2">>20° flexión</option>
+      </select>
+      <label><input type="checkbox" id="cuelloTorsion"> Torsión/Inclinación lateral (+1)</label>
+    </div>
+
+    <div class="form-group">
+      <label for="piernas">Piernas:</label>
+      <select id="piernas" class="form-control">
+        <option value="1">Soporte bilateral, andando, sentado</option>
+        <option value="2">Soporte unilateral, postura inestable</option>
+      </select>
+      <label><input type="checkbox" id="rodillas3060"> Rodillas 30°-60° (+1)</label>
+      <label><input type="checkbox" id="rodillas60plus"> Rodillas >60° (+2)</label>
+    </div>
+
+    <div class="form-group">
+      <label for="tronco">Tronco:</label>
+      <select id="tronco" class="form-control">
+        <option value="1">Erguido</option>
+        <option value="2">Flexión/Extensión 0°-20°</option>
+        <option value="3">Flexión 20°-60° o Extensión >20°</option>
+        <option value="4">Flexión >60°</option>
+      </select>
+      <label><input type="checkbox" id="troncoTorsion"> Torsión/Inclinación lateral (+1)</label>
+    </div>
+
+    <div class="form-group">
+      <label for="carga">Carga:</label>
+      <select id="carga" class="form-control">
+        <option value="0">Menor a 5 kg</option>
+        <option value="1">5-10 kg</option>
+        <option value="2">>10 kg</option>
+      </select>
+      <label><input type="checkbox" id="movRapido"> Movimiento brusco (+1)</label>
+    </div>
+
+    <button type="button" id="calcularGrupoA" class="btn">Calcular Grupo A</button>
+  </form>
+  <div id="resultadoGrupoA" class="resultado"></div>
+
+  <!-- Imagen para el Grupo A -->
+  <div id="imagenGrupoA">
+    <img src="https://cdn.prod.website-files.com/63e4fd179545f210580f863a/66bb78167049cae0d7438442_66bb77742f0574d6a21f07ac_reba%2520table%2520a.jpeg" alt="Grupo A" class="img-fluid">
+
+  </div>
+
+  <!-- Recuadro para sumar a la puntuación de Grupo A -->
+  <div id="inputGrupoAExtra" class="extra">
+    <label for="extraGrupoA">Coeficiente grupo A:</label>
+    <input type="number" id="extraGrupoA" min="0" value="0" class="form-control">
+  </div>
+</section>
+
+<!-- Grupo B -->
+<section id="grupo-b">
+  <h2>Grupo B: Antebrazos, Muñeca y Brazo</h2>
+  <form id="grupoBForm">
+    <div class="form-group">
+      <label for="antebrazos">Antebrazos:</label>
+      <select id="antebrazos" class="form-control">
+        <option value="1">60° a 100° flexión</option>
+        <option value="2"><60° flexión</option>
+      </select>
+    </div>
+
+    <div class="form-group">
+      <label for="muneca">Muñeca:</label>
+      <select id="muneca" class="form-control">
+        <option value="1">0° a 15° extensión</option>
+        <option value="2">>15° flexión</option>
+      </select>
+      <label><input type="checkbox" id="munecaTorsion"> Torsión/Desviación lateral (+1)</label>
+    </div>
+
+    <div class="form-group">
+      <label for="brazo">Brazo:</label>
+      <select id="brazo" class="form-control">
+        <option value="1">0° a 20° flexión</option>
+        <option value="2">>20° extensión</option>
+        <option value="3">20°-45° flexión</option>
+        <option value="4">>90° flexión</option>
+      </select>
+      <label><input type="checkbox" id="brazoAdubcion"> Aducción/Rotación (+1)</label>
+      <label><input type="checkbox" id="brazoElevacion"> Elevación del hombro (+1)</label>
+      <label><input type="checkbox" id="brazoApoyo"> Apoyo/Postura a favor (-1)</label>
+    </div>
+
+    <div class="form-group">
+      <label for="agarre">Fuerza de agarre:</label>
+      <select id="agarre" class="form-control">
+        <option value="0">Buena</option>
+        <option value="1">Aceptable</option>
+        <option value="2">Posible, no aceptable</option>
+        <option value="3">Incómodo o sin agarre</option>
+      </select>
+    </div>
+
+    <button type="button" id="calcularGrupoB" class="btn">Calcular Grupo B</button>
+  </form>
+  <div id="resultadoGrupoB" class="resultado"></div>
+
+  <!-- Imagen para el Grupo B -->
+  <div id="imagenGrupoB">
+    <img src="https://cdn.prod.website-files.com/63e4fd179545f210580f863a/66bb78167049cae0d7438439_66bb77b4a15ba5b8e36f1171_reba%2520table%2520b.jpeg" alt="Imagen ilustrativa Grupo B" class="img-fluid">
+  </div>
+
+  <!-- Recuadro para sumar a la puntuación de Grupo B -->
+  <div id="inputGrupoBExtra" class="extra">
+    <label for="extraGrupoB">Coeficiente grupo B:</label>
+    <input type="number" id="extraGrupoB" min="0" value="0" class="form-control">
+  </div>
+</section>
+
+<!-- Grupo C -->
+<section id="grupo-c">
+  <h2>Grupo C</h2>
+
+  <!-- Imagen para el Grupo C -->
+  <div id="imagenGrupoC">
+    <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEi8glFAkjBnDZNM4PAH6_m3ErEx7-hHPPl4KJQZ7tIZo-0I9EiSTDqmBzpKuPND8fCyrArBCmAkB9KznrK1L_sgVA70cbuBEuuD_8sv790dQi2m3RKVvc4nGptzIc81OO5FyMTEVvkQcmc/s1600/grafica.jpg" alt="Imagen ilustrativa Grupo C" class="img-fluid">
+  </div>
+
+  <!-- Recuadro para sumar a la puntuación de Grupo C -->
+  <div id="inputGrupoCExtra" class="extra">
+    <label for="extraGrupoC">Coeficiente grupo C:</label>
+    <input type="number" id="extraGrupoC" min="0" value="0" class="form-control">
+  </div>
+</section>
+
+<!-- Resultado Final -->
+<section id="resultado-final">
+  <h2>Resultado Final</h2>
+  <button type="button" id="calcularNivelRiesgo" class="btn">Calcular Nivel de Riesgo</button>
+  <div id="nivelRiesgo" class="resultado"></div>
+</section>
+<!-- partial -->
+  <script  src="./script.js"></script>
+
+</body>
+</html>
